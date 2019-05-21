@@ -39,7 +39,7 @@ public class menuAdapter extends RecyclerView.Adapter<menuAdapter.Datos> {
     public void onBindViewHolder(@NonNull Datos datos, int i) {
         item it=list.get(i);
         datos.txt.setText(it.getUrl());
-        Glide.with(context).load("http://192.168.43.103:8000/uploads/"+it.getUrl()).into(datos.img);
+        Glide.with(context).load("http://192.168.43.132:8000/uploads/"+it.getUrl()).into(datos.img);
     }
 
     @Override

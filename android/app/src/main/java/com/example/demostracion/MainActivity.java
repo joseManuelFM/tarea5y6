@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void cargar() {
         AsyncHttpClient client=new AsyncHttpClient();
-        client.get("http://192.168.43.103:8000/image",null,new JsonHttpResponseHandler(){
+        client.get("http://192.168.43.132:8000/image",null,new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 super.onSuccess(statusCode, headers, response);
@@ -55,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                super.onSuccess(statusCode, headers, response);
             }
         });
 
